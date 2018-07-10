@@ -13,19 +13,26 @@ const Header = ({ siteTitle }) => (
         margin: '0 auto',
         maxWidth: 960,
         padding: '1.45rem 1.0875rem',
+        flex: 1,
+        flexDirection: 'column',
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1>
         <Link
           to="/"
           style={{
             color: 'white',
-            textDecoration: 'none',
+            textDecoration: 'underline dotted',
           }}
         >
           {siteTitle}
         </Link>
       </h1>
+      <div >
+        <Link to="/about" style={{color: 'white'}}>
+          About
+        </Link>
+      </div>
     </div>
   </div>
 )
