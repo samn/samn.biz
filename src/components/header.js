@@ -5,6 +5,7 @@ const headerStyle = {
   display: 'flex',
   flexFlow: 'row wrap',
   justifyContent: 'space-between',
+  alignItems: 'center',
 };
 
 const linkStyle = {
@@ -30,7 +31,7 @@ const Header = ({ siteTitle }) => (
     >
       <div style={headerStyle}>
         <Link to="/" style={linkStyle}>
-          <h3>{siteTitle}</h3>
+          <h3 style={{margin: 0}}>{siteTitle}</h3>
         </Link>
         <div>
           <Link to="/about" style={linkStyle}>About</Link>
