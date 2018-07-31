@@ -10,6 +10,8 @@ const headerStyle = {
 const linkStyle = {
   color: 'white',
   marginRight: '1em',
+  textDecoration: 'none',
+  padding: 5,
 };
 
 const Header = ({ siteTitle }) => (
@@ -27,17 +29,13 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <div style={headerStyle}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'underline dotted',
-          }}
-        >
+        <Link to="/" style={linkStyle}>
           <h3>{siteTitle}</h3>
         </Link>
         <div>
           <Link to="/about" style={linkStyle}>About</Link>
+          <Link to="/posts" style={linkStyle}>Posts</Link>
+          <Link to="/recipes" style={linkStyle}>Recipes</Link>
         </div>
       </div>
     </div>

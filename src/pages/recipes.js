@@ -20,8 +20,8 @@ export default ({ data }) => (
 );
 
 export const query = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  query RecipesQuery {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, filter: { fields: { group: { eq: "recipes" } } }) {
       totalCount
       edges {
         node {
