@@ -4,10 +4,10 @@ import Link from 'gatsby-link'
 const AboutPage = () => (
   <div>
     Sam Neubardt is a serious business professional based in Somerville, MA.
+    <br />
+    Look for him around the net!
   </div>
 )
-
-// TODO render this from gql
 
 export default AboutPage
 
