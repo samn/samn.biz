@@ -28,5 +28,6 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
+    'gatsby-plugin-netlify' // needs to be last
   ],
 }
