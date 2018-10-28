@@ -1,22 +1,26 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link, graphql } from 'gatsby'
+
+import Layout from '../components/layout';
 
 export default ({ data }) => (
-  <div>
-    {data && data.allMarkdownRemark && data.allMarkdownRemark.edges.map(({ node }) =>
-      <div key={node.id}>
-        <Link to={node.fields.slug} style={{textDecoration: 'none', color: 'inherit'}}>
-          <h3>
-            {node.frontmatter.title}
-            <span style={{color: '#BBB'}}> — {node.frontmatter.date}</span>
-          </h3>
-          <p>
-            {node.excerpt}
-          </p>
-        </Link>
-      </div>
-    )}
-  </div>
+  <Layout>
+    <div>
+      {data && data.allMarkdownRemark && data.allMarkdownRemark.edges.map(({ node }) =>
+        <div key={node.id}>
+          <Link to={node.fields.slug} style={{textDecoration: 'none', color: 'inherit'}}>
+            <h3>
+              {node.frontmatter.title}
+              <span style={{color: '#BBB'}}> — {node.frontmatter.date}</span>
+            </h3>
+            <p>
+              {node.excerpt}
+            </p>
+          </Link>
+        </div>
+      )}
+    </div>
+  </Layout>
 );
 
 export const query = graphql`

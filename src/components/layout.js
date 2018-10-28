@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby';
 
 import Header from '../components/header'
 
@@ -36,7 +37,7 @@ const Layout = ({ children, data }) => (
     <div>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div style={contentContainerStyle}>
-        {children()}
+        {children}
       </div>
     </div>
     <div style={footerContainerStyle}>
@@ -49,17 +50,24 @@ const Layout = ({ children, data }) => (
 )
 
 Layout.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element)
+  ]),
 }
 
-export default Layout
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+          }
+        }
       }
-    }
-  }
-`
+    `}
+    render={data => <Layout data={data} {...props} />}
+  />
+);
+
