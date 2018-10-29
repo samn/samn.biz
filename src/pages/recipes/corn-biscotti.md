@@ -6,7 +6,7 @@ date: '2018-08-19'
 These delicious creatures are a combination of Christina Tosi's brilliant Corn Cookies, and the Elisabeth Prueitt's biscotti.
 Bright in color with a sweetness reminicant of cereal, these cookies will be sure to impress.
 
-If you don't h ave corn powder you can buy freeze dried corn and pulverize it in a food processor.
+If you don't have corn powder you can buy freeze dried corn and pulverize it in a food processor.
 
 ### Ingredients
 
