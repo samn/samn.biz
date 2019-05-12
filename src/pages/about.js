@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 const AboutPage = () => (
   <Layout>
     <div>
-      Sam Neubardt is a serious business professional based in Somerville, MA.
+      Sam Neubardt is a serious business professional.
       <br />
       Look for him around the net!
     </div>
