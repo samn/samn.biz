@@ -5,7 +5,7 @@
   "repository": "https://github.com/samn/samn.biz",
   "license": "CC-BY-NC-SA-4.0",
   "dependencies": {
-    "gatsby": "^2.13.6",
+    "gatsby": "^5.3.3",
     "gatsby-link": "^2.2.0",
     "gatsby-plugin-catch-links": "^2.1.0",
     "gatsby-plugin-netlify": "^2.1.0",
