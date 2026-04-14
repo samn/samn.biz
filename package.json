@@ -6,8 +6,8 @@
   "license": "CC-BY-NC-SA-4.0",
   "type": "module",
   "scripts": {
-    "build": "eleventy --config=eleventy.config.ts",
-    "dev": "eleventy --serve --config=eleventy.config.ts",
+    "build": "eleventy --config=eleventy.config.mjs",
+    "dev": "eleventy --serve --config=eleventy.config.mjs",
     "lint": "eslint . && prettier --check .",
     "lint:fix": "eslint --fix . && prettier --write .",
     "format": "prettier --write .",

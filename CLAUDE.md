@@ -15,12 +15,12 @@ npm test             # Playwright integration tests (starts dev server automatic
 
 ## Stack
 
-- **SSG**: Eleventy 3 with TypeScript config (`eleventy.config.ts`)
+- **SSG**: Eleventy 3 (`eleventy.config.mjs`)
 - **Templates**: Nunjucks (`.njk`) for layouts and pages, Markdown for content
 - **Styling**: Plain CSS (`src/css/style.css`) — no framework
 - **Tests**: Playwright (`tests/site.spec.ts`)
 - **Hosting**: Cloudflare Pages (static deploy from `_site/`)
-- **CI/CD**: GitHub Actions — lint/build/test on PRs with preview deploys, auto-deploy on main
+- **CI/CD**: GitHub Actions for lint/test; Cloudflare Pages GitHub integration for deploys
 - **Node**: 22 (see `mise.toml`)
 
 ## Project structure
@@ -59,7 +59,4 @@ src/
 
 ## Deployment
 
-Cloudflare Pages project `samn-biz`. Requires these GitHub secrets:
-
-- `CLOUDFLARE_API_TOKEN`
-- `CLOUDFLARE_ACCOUNT_ID`
+Cloudflare Pages project `samn-biz` with GitHub integration (auto-deploys on push). Custom domain: `www2.samn.biz`.

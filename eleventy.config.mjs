@@ -1,10 +1,4 @@
-interface EleventyConfig {
-  addPassthroughCopy(path: string): void
-  addGlobalData(name: string, value: unknown): void
-  addFilter(name: string, fn: (...args: never[]) => unknown): void
-}
-
-export default function (eleventyConfig: EleventyConfig) {
+export default function (eleventyConfig) {
   // Passthrough copy CSS
   eleventyConfig.addPassthroughCopy('src/css')
 
@@ -12,7 +6,7 @@ export default function (eleventyConfig: EleventyConfig) {
   eleventyConfig.addGlobalData('currentYear', new Date().getFullYear())
 
   // Date formatting filter — matches Gatsby's "DD MMMM, YYYY" format
-  eleventyConfig.addFilter('dateFormat', (date: Date) => {
+  eleventyConfig.addFilter('dateFormat', (date) => {
     const d = new Date(date)
     const day = String(d.getUTCDate()).padStart(2, '0')
     const months = [
@@ -35,7 +29,7 @@ export default function (eleventyConfig: EleventyConfig) {
   })
 
   // Excerpt filter — strips HTML and truncates
-  eleventyConfig.addFilter('excerpt', (content: string, length = 200) => {
+  eleventyConfig.addFilter('excerpt', (content, length = 200) => {
     const text = (content ?? '').replace(/<[^>]*>/g, '').trim()
     if (text.length <= length) return text
     return text.substring(0, length).replace(/\s+\S*$/, '') + '\u2026'

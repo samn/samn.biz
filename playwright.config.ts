@@ -18,7 +18,7 @@ export default defineConfig({
   },
   webServer: {
     command:
-      'npx @11ty/eleventy --config=eleventy.config.ts && npx serve _site -l 3737 --no-clipboard',
+      'npx @11ty/eleventy --config=eleventy.config.mjs && npx serve _site -l 3737 --no-clipboard',
     port: 3737,
     reuseExistingServer: !process.env.CI,
   },
