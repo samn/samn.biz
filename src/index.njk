@@ -1,0 +1,18 @@
+---
+layout: base.njk
+eleventyExcludeFromCollections: true
+---
+<div class="post-list">
+  {% set items = collections.content or [] %}
+  {% for item in items | reverse %}
+    <div>
+      <a href="{{ item.url }}">
+        <h3>
+          {{ item.data.title }}
+          <span class="date"> &mdash; {{ item.date | dateFormat }}</span>
+        </h3>
+        <p>{{ item.templateContent | excerpt }}</p>
+      </a>
+    </div>
+  {% endfor %}
+</div>

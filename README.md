@@ -1,23 +1,32 @@
 # samn.biz
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+
+Personal site for Sam Neubardt, built with [Eleventy (11ty)](https://www.11ty.dev/) v3.
 
 ## Install
 
-Make sure that you have the Gatsby CLI program installed:
 ```sh
-npm install --global gatsby-cli
+mise install    # Install Node 22 (or use any Node 22+ manager)
+npm install
 ```
 
-And run from your CLI:
+## Develop
+
 ```sh
-gatsby new gatsby-example-site
+npm run dev     # Local dev server with hot reload
 ```
 
-Then you can run it by:
+## Build
+
 ```sh
-cd gatsby-example-site
-gatsby develop
+npm run build   # Production build → _site/
+```
+
+## Test
+
+```sh
+npm test        # Playwright integration tests
 ```
 
 ## License
+
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

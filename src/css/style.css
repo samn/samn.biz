@@ -1,0 +1,149 @@
+/* Reset & base — matches Typography.js defaults with 18px base font */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: georgia, serif;
+  color: hsla(0, 0%, 0%, 0.8);
+  font-weight: normal;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Typography rhythm */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 1.45rem;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.62rem;
+}
+
+h3 {
+  font-size: 1.31rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.45rem;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 1.45rem;
+  padding-left: 1.45rem;
+}
+
+li {
+  margin-bottom: calc(1.45rem / 2);
+}
+
+a {
+  color: rebeccapurple;
+}
+
+img {
+  max-width: 100%;
+  border: 0;
+}
+
+/* Header */
+header {
+  background: rebeccapurple;
+  margin-bottom: 1.45rem;
+}
+
+.header-inner {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem 1.0875rem;
+}
+
+.header-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.header-content h3 {
+  margin: 0;
+}
+
+.header-content nav a {
+  margin-right: 1em;
+}
+
+/* Content */
+main {
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1.0875rem 1.45rem;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+footer p {
+  padding-right: 10px;
+  margin: 0;
+}
+
+footer a {
+  height: 31px;
+}
+
+/* Post listing */
+.post-list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-list .date {
+  color: #bbb;
+}
