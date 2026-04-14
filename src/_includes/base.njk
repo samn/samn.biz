@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }}</title>
+    <meta name="description" content="Sam Neubardt">
+    <meta name="keywords" content="neubardt, recipes, programming">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="header-content">
+          <a href="/" class="site-title">
+            <h3>{{ site.title }}</h3>
+          </a>
+          <nav>
+            <a href="/about/">About</a>
+            <a href="/recipes/">Recipes</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        {{ content | safe }}
+      </div>
+    </main>
+    <footer>
+      <p>&copy; {{ currentYear }} Sam Neubardt</p>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+        <img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
+      </a>
+    </footer>
+  </body>
+</html>

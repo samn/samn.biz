@@ -1,8 +1,19 @@
-# Project dependencies
-.cache
+# Dependencies
 node_modules
-yarn-error.log
 
-# Build directory
-/public
+# Build output
+_site
+
+# OS
 .DS_Store
+
+# Playwright
+test-results/
+playwright-report/
+
+# Editor
+.vscode/
+*.swp
+
+# Wrangler
+.wrangler/
